@@ -13,7 +13,7 @@ public class Flight
     List<Integer> priecPerId;
 
     public Flight() {
-        id++;
+        
         flightId=id;
         ticketsAvailable=50;
         price=5000;
@@ -21,6 +21,7 @@ public class Flight
         passengerIds= new ArrayList<>();
         noOfTicketsPerId = new ArrayList<>();
         priecPerId=new ArrayList<>();
+        id++;
         
     }
     public boolean addPassenger(String passengerDetails,int passengerId,int noOfTicketsPerId)
@@ -54,7 +55,8 @@ public class Flight
     }
     public void printDetails()
     {
-        
+        int filled = 50 - ticketsAvailable;
+        System.out.println("flight Id :"+flightId + "       no of seats filled  :" + filled );
     }
     
 
